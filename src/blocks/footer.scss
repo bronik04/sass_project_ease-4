@@ -1,0 +1,8 @@
+.footer {
+  background-color: $base-red;
+  padding: $base-padding;
+
+  &__text {
+    @include text(#fff, 15px, 24px);
+  }
+}

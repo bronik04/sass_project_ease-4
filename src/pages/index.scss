@@ -1,0 +1,25 @@
+@import "../vendor/fonts/Roboto/fonts.css";
+@import "../vendor/normalize.css";
+@import "../blocks/var";
+@import "../blocks/mixin.scss";
+@import "../blocks/text.scss";
+@import "../blocks/button";
+@import "../blocks/header";
+@import "../blocks/main";
+@import "../blocks/composition";
+@import "../blocks/rules";
+@import "../blocks/camera";
+@import "../blocks/review";
+@import "../blocks/order";
+@import "../blocks/form";
+@import "../blocks/footer";
+
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.padding {
+  padding: $base-padding 0;
+}

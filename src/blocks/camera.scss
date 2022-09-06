@@ -1,0 +1,33 @@
+.camera {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 180px;
+  padding: $base-padding;
+  background-color: #000;
+  color: #fff;
+
+  &__container {
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+  }
+
+  &__title {
+    @include heading(#fff);
+  }
+
+  &__subtitle {
+    @include text(#fff, 122px, 122px);
+  }
+
+  &__text {
+    color: #fff;
+    text-transform: uppercase;
+    align-self: end;
+  }
+
+  &__img {
+    grid-column: 2;
+  }
+
+}

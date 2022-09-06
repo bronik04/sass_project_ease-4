@@ -1,0 +1,44 @@
+.form {
+  background-color: $base-red;
+  padding: $base-padding;
+
+  &__arrow {
+    display: block;
+    background-image: url('../images/arrow.svg');
+    width: 130px;
+    height: 95px;
+  }
+
+  &__title {
+    display: flex;
+    gap: 50px;
+    @include text(#fff, 120px, 120px);
+  }
+
+  &__title:last-of-type {
+    margin-bottom: 120px;
+    margin-left: 180px;
+  }
+
+  &__email {
+    margin-left: calc(234px - 50px);
+  }
+
+  &__input {
+    width: 348px;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  &__button {
+    width: 205px;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-left: -5px;
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,41 @@
+.composition {
+  background-color: $base-yellow;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 60px;
+  row-gap: 100px;
+  padding: $base-padding;
+
+  &__container {
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+  }
+
+  &__title {
+    @include heading;
+  }
+
+  &__subtitle {
+    @include text($font-size: 64px, $line-height: 64px);
+    margin-bottom: 100px;
+  }
+
+  &__text {
+    max-width: 370px;
+    margin-bottom: 20px;
+  }
+
+  &__text:last-child {
+    margin: 0;
+  }
+
+  &__button {
+    align-self: end;
+  }
+
+  &__img {
+    grid-column: 2;
+    grid-row: 1/-2;
+  }
+}
+

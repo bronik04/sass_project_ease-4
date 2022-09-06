@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  min-height: 84px;
+  background-color: $base-red;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $base-padding;
+
+  &__link {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.menu {
+  @include list;
+  display: flex;
+  gap: 40px;
+
+  &__item {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-align: right;
+    color: #FBFBFB;
+  }
+}

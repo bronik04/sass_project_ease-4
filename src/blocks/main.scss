@@ -1,0 +1,30 @@
+.course {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: $base-padding;
+  column-gap: 60px;
+
+  &__title {
+    @include reset;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 110px;
+    color: #000000;
+  }
+
+  &__img {
+    grid-column: 2;
+    grid-row: 1/4;
+  }
+
+  .text {
+    max-width: 469px;
+  }
+
+  .button {
+    align-self: end;
+  }
+}
+

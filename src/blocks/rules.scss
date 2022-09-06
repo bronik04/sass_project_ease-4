@@ -1,0 +1,10 @@
+.rules {
+  @include list;
+  display: flex;
+  gap: 56px;
+  grid-column: 1/-1;
+
+  &__item {
+    max-width: 291px;
+  }
+}

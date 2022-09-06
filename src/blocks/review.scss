@@ -1,0 +1,26 @@
+.review {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  @include list;
+  grid-column: 1/-1;
+
+  &__item {
+    // max-width: 500px;
+  }
+
+  &__text {
+    @include text(#fff, 43px, 43px);
+    margin-bottom: 60px;
+    height: 173px;
+  }
+
+  &__user {
+    @include text(#fff);
+    margin-bottom: 10px;
+  }
+
+  &__contact {
+    @include text(#fff, 14px);
+  }
+}

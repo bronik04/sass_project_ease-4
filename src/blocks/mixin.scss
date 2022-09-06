@@ -1,0 +1,32 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin heading($text-color: #000) {
+  @include reset;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: $text-color;
+  margin-bottom: 50px;
+}
+
+@mixin text($text-color: #000, $font-size: 18px, $line-height: 28px) {
+  @include reset;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $text-color;
+}
+
+@mixin list {
+  list-style: none;
+  @include reset;
+}

@@ -1,0 +1,7 @@
+  .text {
+    @include text;
+
+    &__bold {
+      font-weight: 700;
+    }
+  }
