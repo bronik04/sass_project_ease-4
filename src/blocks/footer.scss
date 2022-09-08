@@ -1,8 +1,15 @@
 .footer {
   background-color: $base-red;
   padding: $base-padding;
+  box-sizing: border-box;
 
   &__text {
     @include text(#fff, 15px, 24px);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: $tablet-padding;
   }
 }

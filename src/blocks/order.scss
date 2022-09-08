@@ -1,11 +1,13 @@
 .order {
   padding: $base-padding;
   display: grid;
+  justify-items: stretch;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, max-content);
+  // grid-template-rows: repeat(3, max-content);
 
   &__title {
     @include heading;
+    margin-bottom: 50px;
   }
 
   &__subtitle {
@@ -35,5 +37,41 @@
     justify-self: center;
     margin-left: 140px;
   }
+}
 
+@media (max-width: 768px) {
+  .order {
+    grid-template-columns: 1fr;
+    padding: $tablet-padding;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__subtitle {
+      margin-bottom: 60px;
+    }
+
+    &__img {
+      grid-row: 3/4;
+      max-width: 688px;
+      max-height: 360px;
+      margin-bottom: 60px;
+    }
+
+    &__text {
+      grid-column: 1;
+      grid-row: 5/6;
+      justify-self: start;
+      margin-bottom: 60px;
+      padding-top: 0;
+    }
+
+    &__button {
+      grid-column: 1;
+      grid-row: 6/7;
+      justify-self: start;
+      margin-left: 0;
+    }
+  }
 }

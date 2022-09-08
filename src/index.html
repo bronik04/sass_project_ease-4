@@ -7,26 +7,30 @@
         content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible"
         content="ie=edge">
-  <title></title>
+  <title>SASS Project</title>
 </head>
 
 <body>
   <header class="header">
     <nav class="navigation container">
-      <a href="#"
+      <a href="index.html"
          class="logo">
         <img src="<%=require('./images/logo.svg')%>"
-             alt=""
+             alt="Логотип стрелка."
              class="logo__img">
       </a>
+      <button class="header__burger"
+              type="button">
+        <span></span>
+      </button>
       <ul class="menu">
         <li class="menu__item">
-          <a href=""
+          <a href="#composition"
              class="navigation__link">Композиция</a>
         </li>
-        <li class="menu__item"><a href=""
+        <li class="menu__item"><a href="#camera"
              class="navigation__link">Камера</a></li>
-        <li class="menu__item"><a href=""
+        <li class="menu__item"><a href="#order"
              class="navigation__link">Поиск заказов</a></li>
       </ul>
     </nav>
@@ -41,16 +45,17 @@
            src="<%=require('./images/foest.jpg')%>"
            alt="Лес в тумане.">
     </section>
-    <section class="composition">
+    <section class="composition"
+             id="composition">
+      <h2 class="composition__title">Композиция</h2>
+      <h3 class="composition__subtitle">Изучите композицию</h3>
       <div class="composition__container">
-        <h2 class="composition__title">Композиция</h2>
-        <h3 class="composition__subtitle">Изучите композицию</h3>
         <p class="text composition__text">Вы изучите гармоничное размещение всех
           элементов изображения на <span class="text__bold">снимке</span>.</p>
         <p class="text composition__text">Изучите композицию интуитивную
           и&nbsp;какие-то определённые законы.</p>
-        <button class="button composition__button">Записаться!</button>
       </div>
+      <button class="button composition__button">Записаться!</button>
       <img class="composition__img"
            src="<%=require('./images/road.jpg')%>"
            alt="Лес в тумане.">
@@ -67,14 +72,13 @@
       </ul>
     </section>
 
-    <section class="camera">
-      <div class="camera__container">
-        <h2 class="camera__title">камера</h2>
-        <h3 class="camera__subtitle">Настройка</h3>
-        <h3 class="camera__subtitle">Съемка</h3>
-        <h3 class="camera__subtitle">Обработка</h3>
-        <p class="text camera__text">отзывы про часть о камерах:</p>
-      </div>
+    <section class="camera"
+             id="camera">
+      <h2 class="camera__title">камера</h2>
+      <h3 class="camera__subtitle">Настройка</h3>
+      <h3 class="camera__subtitle">Съемка</h3>
+      <h3 class="camera__subtitle">Обработка</h3>
+      <p class="text camera__text">отзывы про часть о камерах:</p>
       <img class="camera__img"
            src="<%=require('./images/jungle.jpg')%>"
            alt="Джунгли.">
@@ -95,7 +99,8 @@
         </li>
       </ul>
     </section>
-    <section class="order">
+    <section class="order"
+             id="order">
       <h2 class="order__title">поиск заказов</h2>
       <h3 class="order__subtitle">Научим находить заказы!</h3>
       <img src="<%=require('./images/tree.jpg')%>"

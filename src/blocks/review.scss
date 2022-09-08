@@ -4,10 +4,7 @@
   column-gap: 50px;
   @include list;
   grid-column: 1/-1;
-
-  &__item {
-    // max-width: 500px;
-  }
+  padding-top: 180px;
 
   &__text {
     @include text(#fff, 43px, 43px);
@@ -22,5 +19,23 @@
 
   &__contact {
     @include text(#fff, 14px);
+  }
+}
+
+@media (max-width: 768px) {
+  .review {
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+
+    &__item {
+      border-bottom: 1px solid #fff;
+      padding-bottom: 60px;
+      box-sizing: border-box;
+    }
+
+    &__item:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
   }
 }
