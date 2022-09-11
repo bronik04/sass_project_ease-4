@@ -66,3 +66,36 @@
     }
   }
 }
+
+@media (width < 425px) {
+  .form {
+    padding: $mobile-padding;
+
+    &__title {
+      font-size: 40px;
+      @include mobile-heading-border(#fff);
+    }
+
+    &__title:last-of-type {
+      border: none;
+    }
+
+    &__subtitle {
+      font-size: 30px;
+      line-height: 127%;
+    }
+
+    &__input {
+      width: 175px;
+    }
+
+    &__button {
+      width: 106px;
+    }
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 129%;
+  }
+}

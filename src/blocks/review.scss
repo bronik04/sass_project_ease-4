@@ -9,7 +9,8 @@
   &__text {
     @include text(#fff, 43px, 43px);
     margin-bottom: 60px;
-    height: 173px;
+    // todo проверить
+    max-height: 173px;
   }
 
   &__user {
@@ -36,6 +37,23 @@
     &__item:last-child {
       border: none;
       padding-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .review {
+    padding-top: 60px;
+    row-gap: 30px;
+
+    &__item {
+      padding-bottom: 30px;
+    }
+
+    &__text {
+      font-size: 24px;
+      line-height: 108%;
+      margin-bottom: 30px;
     }
   }
 }

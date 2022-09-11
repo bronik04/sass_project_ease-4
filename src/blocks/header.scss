@@ -8,6 +8,11 @@
   &__burger {
     display: none;
   }
+
+  &__burger:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
 }
 
 .navigation {
@@ -55,10 +60,6 @@
       border: none;
     }
 
-    .navigation {
-      padding: 0 40px;
-    }
-
     &__burger::after {
       position: absolute;
       top: 0;
@@ -91,10 +92,29 @@
       border-radius: 2px;
       content: '';
     }
+  }
 
-    .menu {
-      position: absolute;
-      right: -1000px;
-    }
+  .navigation {
+    padding: 0 40px;
+  }
+
+  .menu {
+    // position: absolute;
+    // right: -1000px;
+    display: none;
+  }
+
+  .menu_active {
+    display: flex;
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    min-height: 70px;
+  }
+
+  .navigation {
+    padding: 0 20px;
   }
 }

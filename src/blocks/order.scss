@@ -17,6 +17,7 @@
   }
 
   &__img {
+    width: 100%;
     grid-row: 3/4;
   }
 
@@ -73,5 +74,27 @@
       justify-self: start;
       margin-left: 0;
     }
+  }
+}
+
+@media (width < 425px) {
+  .order {
+    padding: $mobile-padding;
+
+    &__title {
+      margin-bottom: 30px;
+      @include mobile-heading-border;
+    }
+
+    &__subtitle {
+      font-size: 32px;
+      line-height: 127%;
+    }
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 129%;
+    margin-bottom: 30px;
   }
 }

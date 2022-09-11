@@ -29,3 +29,8 @@
   list-style: none;
   @include reset;
 }
+
+@mixin mobile-heading-border($border-color: #000) {
+  border-top: 1px solid $border-color;
+  padding-top: 20px;
+}

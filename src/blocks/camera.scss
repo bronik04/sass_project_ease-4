@@ -24,7 +24,7 @@
   }
 
   &__img {
-    display: block;
+    width: 100%;
     grid-column: 2;
     grid-row: 1/7;
   }
@@ -50,5 +50,30 @@
     &__subtitle:last-of-type {
       margin-bottom: 60px;
     }
+  }
+}
+
+@media (width < 425px) {
+  .camera {
+    padding: $mobile-padding;
+
+    &__title {
+      @include mobile-heading-border(#fff);
+      margin-bottom: 30px;
+    }
+
+    &__subtitle {
+      font-size: 48px;
+      line-height: 127%;
+    }
+
+    &__img {
+      max-height: 268px;
+    }
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 129%;
   }
 }

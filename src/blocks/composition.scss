@@ -40,6 +40,7 @@
   }
 
   &__img {
+    width: 100%;
     grid-column: 2;
     grid-row: 1/-1;
   }
@@ -64,5 +65,26 @@
       grid-row: 3/4;
       margin-bottom: 60px;
     }
+  }
+}
+
+@media (width < 425px) {
+  .composition {
+    padding: $mobile-padding;
+
+    &__title {
+      margin-bottom: 30px;
+      @include mobile-heading-border;
+    }
+
+    &__subtitle {
+      font-size: 30px;
+      line-height: 127%;
+    }
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 129%;
   }
 }

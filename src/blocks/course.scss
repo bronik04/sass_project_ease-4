@@ -19,14 +19,30 @@
     grid-column: 2;
     grid-row: 1/4;
   }
+}
 
-  .text {
-    @include text(#000, 20px, 28px);
-    max-width: 469px;
+.text {
+  @include text(#000, 20px, 28px);
+  max-width: 469px;
+}
+
+.button {
+  align-self: end;
+}
+
+@media (768px < width < 1440px) {
+  .course {
+    &__title {
+      font-size: 6.94vw;
+    }
   }
+}
 
-  .button {
-    align-self: end;
+@media (425px < width < 768px) {
+  .course {
+    &__title {
+      font-size: 13.2vw;
+    }
   }
 }
 
@@ -41,7 +57,20 @@
       grid-column: 1;
       grid-row: 2/3;
     }
+  }
+}
 
+@media (width < 425px) {
+  .course {
+    padding: $mobile-padding;
 
+    &__title {
+      font-size: 47px;
+    }
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 129%;
   }
 }
