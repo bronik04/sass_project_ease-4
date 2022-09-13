@@ -1,0 +1,44 @@
+.menu {
+  @include list;
+  display: flex;
+  gap: 40px;
+
+  &__item {
+    font-family: 'Inter', Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #FBFBFB;
+  }
+
+  &__item:hover {
+    opacity: .5;
+    transition: all .3s ease-in-out;
+  }
+}
+
+@media (max-width: 778px) {
+  .menu {
+    display: none;
+
+    &_active {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .menu_active {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: $base-red;
+    gap: 12px;
+    padding: 25px 0;
+  }
+}

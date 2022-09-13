@@ -1,9 +1,21 @@
 import './index.scss';
+import '../components/burger';
+// import  '../components/headerScroll';
 
-const burgerButton = document.querySelector(".header__burger");
-const menu = document.querySelector(".menu");
+const anchors = document.querySelectorAll('a[href*="#"]');
 
-burgerButton.addEventListener("click", () => {
-  console.log('Click');
-  menu.classList.toggle('menu_active');
-});
+// Палвный скрол при клике на ссылку
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    const blockID = anchor.getAttribute('href');
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
+
+
+
