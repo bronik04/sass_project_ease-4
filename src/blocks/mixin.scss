@@ -16,10 +16,6 @@
 
 @mixin text($text-color: #000, $font-size: 18px, $line-height: 28px) {
   @include reset;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-
   font-size: $font-size;
   line-height: $line-height;
   color: $text-color;
