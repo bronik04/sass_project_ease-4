@@ -3,30 +3,12 @@
   padding: 0;
 }
 
-@mixin heading($text-color: #000) {
-  @include reset;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  text-transform: uppercase;
-  color: $text-color;
-}
-
-@mixin text($text-color: #000, $font-size: 18px, $line-height: 28px) {
-  @include reset;
-  font-size: $font-size;
-  line-height: $line-height;
-  color: $text-color;
-}
-
 @mixin list {
   list-style: none;
   @include reset;
 }
 
-@mixin mobile-heading-border($border-color: #000) {
-  border-top: 1px solid $border-color;
-  padding-top: 20px;
+@mixin text($font-size: 18, $line-height: 1.56, $viewport: 1440) {
+  font-size: #{calc($font-size / $viewport * 100)}vw;
+  line-height: $line-height;
 }

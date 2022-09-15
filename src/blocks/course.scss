@@ -1,3 +1,6 @@
+@import "var";
+@import "mixin";
+
 .course {
   display: grid;
   grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
@@ -6,12 +9,16 @@
 
   &__title {
     @include reset;
-    font-family: 'Roboto';
-    font-style: normal;
+    @include text(100, 1.1, 1440);
     font-weight: 400;
-    font-size: 100px;
-    line-height: 1.1;
-    color: #000000;
+  }
+
+  // todo check on desktop PP
+  &__text {
+    @include reset;
+    font-size: 20px;
+    line-height: 1.39;
+    max-width: 469px;
   }
 
   &__img {
@@ -21,28 +28,14 @@
   }
 }
 
-.text {
-  @include text(#000, 20px, 28px);
-  max-width: 469px;
-}
-
 .button {
   align-self: end;
 }
 
-@media (768px < width < 1440px) {
-  .course {
-    &__title {
-      font-size: 6.94vw;
-    }
-  }
-}
-
-@media (425px < width < 768px) {
-  .course {
-    &__title {
-      font-size: 13.2vw;
-    }
+@media (min-width: 1440px) {
+  .course__title {
+    font-size: 100px;
+    line-height: 1.1;
   }
 }
 
@@ -53,6 +46,10 @@
     padding: $tablet-padding;
     row-gap: 60px;
 
+    &__title {
+      @include text($font-size: 100, $line-height: 1.1, $viewport: 768);
+    }
+
     &__img {
       grid-column: 1;
       grid-row: 2/3;
@@ -60,17 +57,29 @@
   }
 }
 
-@media (width < 425px) {
+@media (max-width: 425px) {
   .course {
-    padding: $mobile-padding;
+    padding: 20px;
+    row-gap: 30px;
 
     &__title {
       font-size: 47px;
     }
-  }
 
-  .text {
-    font-size: 14px;
-    line-height: 129%;
+    &__img {
+      padding: 30px 0;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 1.29;
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    &__button {
+      grid-column: 1;
+      grid-row: 4;
+    }
   }
 }

@@ -1,7 +1,18 @@
-  .text {
-    @include text;
+@import "mixin";
+
+.text {
+    @include reset;
+    font-size: 18px;
+    line-height: 1.56;
 
     &__bold {
       font-weight: 700;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .text{
+      font-size: 14px;
+      line-height: 1.29;
     }
   }

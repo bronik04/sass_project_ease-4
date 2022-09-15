@@ -5,21 +5,16 @@
   grid-template-rows: repeat(5, max-content);
   justify-items: stretch;
   column-gap: 60px;
-  // row-gap: 50px;
   padding: $base-padding;
 
   &__title {
-    @include heading;
     grid-column: 1;
     grid-row: 1;
-    margin-bottom: 60px;
   }
 
   &__subtitle {
     grid-column: 1;
     grid-row: 2;
-    @include text($font-size: 64px, $line-height: 64px);
-    margin-bottom: 100px;
     max-width: 403px;
   }
 
@@ -51,14 +46,6 @@
     grid-template-columns: 1fr;
     padding: $tablet-padding;
 
-    &__title {
-      margin-bottom: 40px;
-    }
-
-    &__subtitle {
-      margin-bottom: 60px;
-    }
-
     &__img {
       max-height: 685px;
       grid-column: 1;
@@ -71,20 +58,5 @@
 @media (width < 425px) {
   .composition {
     padding: $mobile-padding;
-
-    &__title {
-      margin-bottom: 30px;
-      @include mobile-heading-border;
-    }
-
-    &__subtitle {
-      font-size: 30px;
-      line-height: 127%;
-    }
-  }
-
-  .text {
-    font-size: 14px;
-    line-height: 129%;
   }
 }

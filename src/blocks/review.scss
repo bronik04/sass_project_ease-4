@@ -1,25 +1,40 @@
 .review {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 50px;
+  grid-template-columns: minmax(100px, 526px) minmax(100px,497px);
+  column-gap: 170px;
   @include list;
   grid-column: 1/-1;
   padding-top: 180px;
 
   &__text {
-    @include text(#fff, 43px, 43px);
+    @include reset;
+    @include text($font-size: 43, $line-height: 1);
     margin-bottom: 60px;
-    // todo проверить
-    max-height: 173px;
+    color: #ffffff;
   }
 
   &__user {
-    @include text(#fff);
+    @include reset;
+    font-size: 18px;
+    line-height: 1.56;
     margin-bottom: 10px;
+    color: #ffffff;
+
   }
 
   &__contact {
-    @include text(#fff, 14px);
+    @include reset;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #ffffff;
+
+  }
+}
+
+@media (min-width: 1440px) {
+  .review__text {
+    font-size: 43px;
+    line-height: 1.1;
   }
 }
 
@@ -27,6 +42,10 @@
   .review {
     grid-template-columns: 1fr;
     row-gap: 60px;
+
+    &__text {
+      font-size: 43px;
+    }
 
     &__item {
       border-bottom: 1px solid #fff;
@@ -52,8 +71,13 @@
 
     &__text {
       font-size: 24px;
-      line-height: 108%;
+      line-height: 1.08;
       margin-bottom: 30px;
+    }
+
+    &__contact {
+      font-size: 12px;
+      line-height: 1;
     }
   }
 }
