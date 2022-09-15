@@ -2,7 +2,7 @@
   padding: $base-padding;
   display: grid;
   justify-items: stretch;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: fit-content(648px);
 
 
   &__subtitle {
@@ -31,15 +31,11 @@
     margin-left: 140px;
   }
 }
-
+// todo При сужении происходит наложение
 @media (max-width: 768px) {
   .order {
     grid-template-columns: 1fr;
     padding: $tablet-padding;
-
-    &__subtitle {
-      margin-bottom: 60px;
-    }
 
     &__img {
       grid-row: 3/4;
@@ -65,13 +61,13 @@
   }
 }
 
-@media (width < 425px) {
+@media (max-width: 425px) {
   .order {
     padding: $mobile-padding;
 
     &__subtitle {
       font-size: 32px;
-      line-height: 127%;
+      line-height: 1.27;
     }
   }
 }

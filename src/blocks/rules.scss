@@ -16,10 +16,13 @@
 
 @media (max-width: 768px) {
   .rules {
-    grid-column: 1;
-    flex-direction: column;
-    padding-top: 80px;
-    gap: 30px;
+    padding: $tablet-padding;
+
+    &__list {
+      grid-column: 1;
+      flex-direction: column;
+      gap: 30px;
+    }
 
     &__item {
       max-width: 100%;

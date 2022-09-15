@@ -4,7 +4,7 @@ import '../components/burger';
 
 const anchors = document.querySelectorAll('a[href*="#"]');
 
-// Палвный скрол при клике на ссылку
+// todo валидация формы
 
 for (let anchor of anchors) {
   anchor.addEventListener('click', (evt) => {

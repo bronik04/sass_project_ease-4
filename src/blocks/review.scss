@@ -44,13 +44,15 @@
     row-gap: 60px;
 
     &__text {
-      font-size: 43px;
+      //font-size: 43px;
+      @include text($font-size: 43, $line-height: 1, $viewport: 768);
     }
 
     &__item {
       border-bottom: 1px solid #fff;
       padding-bottom: 60px;
       box-sizing: border-box;
+      max-width: 526px;
     }
 
     &__item:last-child {

@@ -55,7 +55,7 @@
   }
 }
 
-@media (width < 425px) {
+@media (max-width: 425px) {
   .composition {
     padding: $mobile-padding;
   }

@@ -48,13 +48,17 @@
       max-height: 656px;
     }
 
+    &__subtitle {
+      @include text($font-size: 122, $line-height: 1, $viewport: 768);
+    }
+
     &__subtitle:last-of-type {
       margin-bottom: 60px;
     }
   }
 }
 
-@media (width < 425px) {
+@media (max-width: 425px) {
   .camera {
     padding: $mobile-padding;
 

@@ -6,6 +6,7 @@
   box-sizing: border-box;
 
   &__text {
+    @include reset;
     font-size: 15px;
     line-height: 1.6;
     color: #ffffff;
