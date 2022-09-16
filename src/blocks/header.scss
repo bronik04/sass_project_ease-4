@@ -4,11 +4,10 @@
   background-color: $base-red;
   position: sticky;
   top: 0;
-  transition: opacity .3s linear;
+  transition: all .3s linear;
 
   &_hide {
-    opacity: 0;
-    transition: opacity .3s linear;
+    transform: translateY(-100px);
   }
 
   &__burger {

@@ -2,20 +2,23 @@ import './index.scss';
 import '../components/burger';
 // import  '../components/headerScroll';
 
-const anchors = document.querySelectorAll('a[href*="#"]');
+const navigationLinks = document
+  .querySelectorAll('.navigation__link[data-goto]');
 
-// todo валидация формы
-
-for (let anchor of anchors) {
-  anchor.addEventListener('click', (evt) => {
+navigationLinks.forEach((menuLink) => {
+  menuLink.addEventListener('click', (evt) => {
     evt.preventDefault();
-    const blockID = anchor.getAttribute('href');
-    document.querySelector('' + blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-}
+    const menuLink = evt.target;
+    const gotoBlock = document.querySelector(menuLink.dataset.goto);
+    const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY -
+        document.querySelector('.header').offsetHeight;
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: 'smooth'
+      });
+  });
+});
+
 
 
 

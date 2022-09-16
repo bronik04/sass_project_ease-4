@@ -7,7 +7,6 @@ const scrollPosition = () => window.scrollY;
 const containHide = () => header.classList.contains('header_hide');
 
 window.addEventListener('scroll', () => {
-  console.log('scroll');
   if (scrollPosition() > lastScroll && !containHide()) {
     header.classList.add('header_hide');
   } else if (scrollPosition() < lastScroll) {
