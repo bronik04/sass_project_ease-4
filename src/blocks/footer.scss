@@ -20,6 +20,9 @@
 }
 
 @media screen and (max-width: 425px) {
+  .footer {
+    padding: 20px;
+  }
   .footer__text {
     font-size: 12px;
   }

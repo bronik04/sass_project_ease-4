@@ -37,3 +37,18 @@
     }
   }
 }
+
+@media (max-width: 425px) {
+  .rules {
+    padding: 60px 22px 20px 20px;
+
+    &__list {
+      gap: 14px;
+    }
+
+    &__item {
+      padding-bottom: 14px;
+      max-width: 275px;
+    }
+  }
+}

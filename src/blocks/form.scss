@@ -13,6 +13,7 @@
     display: flex;
     gap: 50px;
     @include text(120, 1);
+    font-weight: 400;
     @include reset;
     color: #ffffff;
   }
@@ -80,7 +81,7 @@
     padding: $mobile-padding;
 
     &__title {
-      font-size: 40px;
+      font-size: 48px;
       border-top: 1px solid;
       padding-top: 20px;
     }
@@ -97,10 +98,12 @@
 
     &__input {
       width: 175px;
+      font-size: 11px;
     }
 
     &__button {
       width: 106px;
+      font-size: 11px;
     }
   }
 }
