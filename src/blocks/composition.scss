@@ -1,11 +1,11 @@
 .composition {
-  background-color: $base-yellow;
+  background-color: $bgComposition;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, max-content);
   justify-items: stretch;
   column-gap: 60px;
-  padding: $base-padding;
+  padding: $desktop-padding;
 
   &__title {
     grid-column: 1;

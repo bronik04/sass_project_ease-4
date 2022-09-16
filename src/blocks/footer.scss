@@ -1,8 +1,8 @@
-@import "var";
+@import "variable";
 
 .footer {
-  background-color: $base-red;
-  padding: $base-padding;
+  background-color: $bgHeader;
+  padding: $desktop-padding;
   box-sizing: border-box;
 
   &__text {

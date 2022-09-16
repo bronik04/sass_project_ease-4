@@ -1,6 +1,6 @@
 .rules {
-  background-color: $base-yellow;
-  padding: $base-padding;
+  background-color: $bgComposition;
+  padding: $desktop-padding;
 
   &__list {
     @include list;

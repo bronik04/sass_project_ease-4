@@ -1,5 +1,5 @@
 .order {
-  padding: $base-padding;
+  padding: $desktop-padding;
   display: grid;
   justify-items: stretch;
   grid-template-columns: fit-content(648px);
@@ -31,7 +31,7 @@
     margin-left: 140px;
   }
 }
-// todo При сужении происходит наложение
+
 @media (max-width: 768px) {
   .order {
     grid-template-columns: 1fr;
