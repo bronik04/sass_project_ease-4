@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <title>SASS Project</title>
+</head>
+
+<body class='page'>
+  <header class="header">
+    <nav class="navigation container">
+      <a href="index.html"
+         class="logo">
+        <img src="<%=require('./images/logo.svg')%>"
+             alt="Логотип стрелка."
+             class="logo__img">
+      </a>
+      <ul class="menu">
+        <li class="menu__item">
+          <a data-goto=".composition"
+             href="#"
+             class="navigation__link">Композиция
+          </a>
+        </li>
+        <li class="menu__item">
+          <a data-goto=".camera"
+             href="#"
+             class="navigation__link">Камера
+          </a>
+        </li>
+        <li class="menu__item">
+          <a data-goto=".order"
+             href="#"
+             class="navigation__link">Поиск заказов
+          </a>
+        </li>
+      </ul>
+      <button
+        class="header__burger"
+        type="button"><span></span>
+      </button>
+    </nav>
+  </header>
+  <main class="main container">
+    <section class="course">
+      <h1 class="course__title">Курс по фотографии</h1>
+      <p class="course__text">Фотография в природных условиях, уроки по
+        композиции и по пользованию камерой.</p>
+      <button class="button text course__button">Подробнее</button>
+      <img class="course__img"
+           src="<%=require('./images/foest.jpg')%>"
+           alt="Лес в тумане.">
+    </section>
+
+    <section class="composition"
+             id="composition">
+      <h2 class="title composition__title">Композиция</h2>
+      <h3 class="subtitle composition__subtitle">Изучите композицию</h3>
+      <div class="composition__container">
+        <p class="text composition__text">Вы изучите гармоничное размещение
+          всех элементов изображения на <span class="text__bold">снимке</span>.
+        </p>
+        <p class="text composition__text">Изучите композицию интуитивную
+          и&nbsp;какие-то определённые законы.</p>
+      </div>
+      <button class="button composition__button">Записаться!</button>
+      <img class="composition__img"
+           src="<%=require('./images/road.jpg')%>"
+           alt="Лес в тумане.">
+    </section>
+
+    <section class="rules">
+      <ul class="rules__list">
+        <li class=" rules__item text">Првило третей, при котором нужно
+          распологать объекты на пересечениях.</li>
+        <li class="rules__item text">Простота: убирай всё лишнее
+          и&nbsp;кадрируй!</li>
+        <li class="rules__item text">Равновесие: уравновесь пятна объекта и
+          фона.</li>
+        <li class="rules__item text">3D глубина кадра: расположи объект позади
+          и
+          перед другими предметами.</li>
+      </ul>
+    </section>
+
+    <section class="camera"
+             id="camera">
+      <h2 class="title camera__title">камера</h2>
+      <h3 class="camera__subtitle">Настройка</h3>
+      <h3 class="camera__subtitle">Съемка</h3>
+      <h3 class="camera__subtitle">Обработка</h3>
+      <p class="text camera__text">отзывы про часть о камерах:</p>
+      <img class="camera__img"
+           src="<%=require('./images/jungle.jpg')%>"
+           alt="Джунгли.">
+      <ul class="review">
+        <li class="review__item">
+          <p class="review__text">на&nbsp;этом курсе я научился пользоватся
+            камерой, как&nbsp;настоящий профессионал!</p>
+          <p class="review__user">Питер, водитель.</p>
+          <p class="review__contact">@piter123</p>
+        </li>
+        <li class="review__item">
+          <p class="review__text">супер крутой курс! на&nbsp;части&nbsp;про фотики
+            я&nbsp;стал разбираться
+            в предназначении&nbsp;кнопок</p>
+          <p class="review__user">Джон, спортсмен.</p>
+          <p class="review__contact">@john_sport</p>
+        </li>
+      </ul>
+    </section>
+    <section class="order"
+             id="order">
+      <h2 class="title order__title">поиск заказов</h2>
+      <h3 class="subtitle order__subtitle">Научим находить заказы!</h3>
+      <img src="<%=require('./images/tree.jpg')%>"
+           alt="Высокое дерево."
+           class="order__img">
+      <p class="text order__text">Мы научим вас искать заказы на всяких фриланс
+        биржах, а когда вы сделаете крутое
+        портфолио, мы поможем найти постоянную работу.</p>
+      <button class="button order__button">Записаться!</button>
+    </section>
+
+    <section class="form">
+      <h2 class="form__title"><span class="form__arrow"></span>Записаться!</h2>
+      <h2 class="form__title">Сейчас!</h2>
+      <form class="form__email"
+            action="#">
+        <input class="form__input"
+               type="email"
+               placeholder="Ваша почта">
+        <button type="submit"
+                class="form__button">Записаться!</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer container">
+    <p class="footer__text">2021 Photo-lessons.</p>
+  </footer>
+</body>
+
+</html>
